@@ -1,0 +1,15 @@
+.interval_outer{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    display: flex;
+    height: auto;
+    background-color: rgb(240, 240, 239);
+
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}   
+
+.interval_inner{
+    margin: 10px;
+    font-size: 30px;
+}
