@@ -92,7 +92,7 @@ export default function DashBoard() {
         console.log(data.data);
         console.log(dashBoardCount[0].total)
       });
-
+      
     fetch("http://172.19.1.17/main/eric/ssoc_dashboard/soc_trend.php?day=7", {
       method: "GET",
       headers: { "Content-Type": "application/json" },
@@ -102,7 +102,7 @@ export default function DashBoard() {
         setData(data.trend);
       });
 
-    fetch("", {
+    fetch("http://172.19.1.17/main/eric/ssoc_dashboard/soc_table.php", {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     })
