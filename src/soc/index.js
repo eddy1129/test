@@ -55,7 +55,7 @@ export default function DashBoard() {
     // fetch("http://10.250.70.184/main/eric/ssoc_dashboard/soc_count.php?day=" + value, {
     fetch("http://172.19.1.17/main/eric/ssoc_dashboard/soc_count.php?day=" + value, {
       method: "GET",
-      headers: { "Content-Type": "application/json" },
+     /*  headers: { "Content-Type": "application/json" }, */
     })
       .then((response) => response.json())
       .then((data) => {
@@ -70,7 +70,7 @@ export default function DashBoard() {
     // fetch("http://10.250.70.184/main/eric/ssoc_dashboard/soc_trend.php?day=" + value, {
     fetch("http://172.19.1.17/main/eric/ssoc_dashboard/soc_trend.php?day=" + value, {
       method: "GET",
-      headers: { "Content-Type": "application/json" },
+      /* headers: { "Content-Type": "application/json" }, */
     })
       .then((response) => response.json())
       .then((data) => {
@@ -82,9 +82,10 @@ export default function DashBoard() {
 
   useEffect(() => {
     // fetch("http://10.250.70.184/main/eric/ssoc_dashboard/soc_count.php?day=1", {
-    fetch("http://172.19.1.17/main/eric/ssoc_dashboard/soc_count.php?day=1", {
+/*     fetch("http://172.19.1.17/main/eric/ssoc_dashboard/soc_count.php?day=1", {
+ */    fetch("https://raw.githubusercontent.com/eddy1129/test/master/src/day1.json", {
       method: "GET",
-      headers: { "Content-Type": "application/json" },
+      /* headers: { "Content-Type": "application/json" }, */
     })
       .then((response) => response.json())
       .then((data) => {
@@ -92,19 +93,20 @@ export default function DashBoard() {
         console.log(data.data);
         console.log(dashBoardCount[0].total)
       });
-      
-    fetch("http://172.19.1.17/main/eric/ssoc_dashboard/soc_trend.php?day=7", {
+/*     fetch("http://172.19.1.17/main/eric/ssoc_dashboard/soc_trend.php?day=7", {
+ */    fetch("https://raw.githubusercontent.com/eddy1129/test/master/src/day7.json", {
       method: "GET",
-      headers: { "Content-Type": "application/json" },
+      /* headers: { "Content-Type": "application/json" }, */
     })
       .then((response) => response.json())
       .then((data) => {
         setData(data.trend);
       });
 
-    fetch("http://172.19.1.17/main/eric/ssoc_dashboard/soc_table.php", {
+/*     fetch("http://172.19.1.17/main/eric/ssoc_dashboard/soc_table.php", {
+ */    fetch("https://raw.githubusercontent.com/eddy1129/test/master/src/data.json", {
       method: "GET",
-      headers: { "Content-Type": "application/json" },
+      /* headers: { "Content-Type": "application/json" }, */
     })
       .then((response) => response.json())
       .then((data) => {
@@ -173,6 +175,7 @@ export default function DashBoard() {
       dataIndex: 'time_left',
       key: 'time_left',
       render: (time_left) => {
+        //<>
         if (time_left <= 0) {
           return (
             <>
@@ -188,6 +191,8 @@ export default function DashBoard() {
             </>
           );
         }
+
+        //</>
       },
     },
     {
