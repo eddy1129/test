@@ -92,6 +92,7 @@ export default function DashBoard() {
         console.log(data.data);
         console.log(dashBoardCount[0].total)
       });
+
     fetch("http://172.19.1.17/main/eric/ssoc_dashboard/soc_trend.php?day=7", {
       method: "GET",
       headers: { "Content-Type": "application/json" },
@@ -101,7 +102,7 @@ export default function DashBoard() {
         setData(data.trend);
       });
 
-    fetch("http://172.19.1.17/main/eric/ssoc_dashboard/soc_table.php", {
+    fetch("", {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     })
@@ -110,25 +111,6 @@ export default function DashBoard() {
         setTableData(data.table);
       });
 
-    /*    const timeInterval = setInterval(() => {
-        switch (selectedOption) {
-          case '1':
-            setSelectedOption('1');
-            break;
-          case '7':
-            setSelectedOption('7');
-            break;
-          case '30':
-            setSelectedOption('30');
-            break;
-          case '90':
-            setSelectedOption('90');
-            break;
-          default:
-            setSelectedOption('1');
-        }
-      }, 1000); */
-
     const interval = setInterval(() => {
       const formattedTime = moment().format('YYYY-MM-DD');
       setCurrentTime(formattedTime);
@@ -136,7 +118,7 @@ export default function DashBoard() {
 
     return () => {
       clearInterval(interval);
-     /*  clearInterval(timeInterval); */
+     
     };
   }, []);
 
@@ -191,7 +173,6 @@ export default function DashBoard() {
       dataIndex: 'time_left',
       key: 'time_left',
       render: (time_left) => {
-        //<>
         if (time_left <= 0) {
           return (
             <>
@@ -207,8 +188,6 @@ export default function DashBoard() {
             </>
           );
         }
-
-        //</>
       },
     },
     {

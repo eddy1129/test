@@ -1,0 +1,212 @@
+{
+    "table": [
+      {
+        "date": "2023-10-27 11:44:19",
+        "category": "A2P",
+        "project": "A2P (IOSMS)",
+        "details": "Actions of SSOC:\r\n1. Checked the alert email with summary report related to non-delivery message or undelivered from corresponding SP account.\r\n2. Report to corresponding carrier(s) to investigate the undelivered reason.",
+        "sla": "30",
+        "time_left": "734"
+      },
+      {
+        "date": "2023-10-26 16:44:48",
+        "category": "A2P",
+        "project": "A2P (IOSMS)",
+        "details": "Actions of SSOC:\r\n1. Checked the alert email with summary report related to non-delivery message or undelivered from corresponding SP account.\r\n2. Report to corresponding carrier(s) to investigate the undelivered reason.",
+        "sla": "30",
+        "time_left": "-405"
+      },
+      {
+        "date": "2023-10-26 10:41:54",
+        "category": "A2P",
+        "project": "A2P (IOSMS)",
+        "details": "Actions of SSOC:\r\n1. Checked the alert email with summary report related to non-delivery message or undelivered from corresponding SP account.\r\n2. Report to corresponding carrier(s) to investigate the undelivered reason.",
+        "sla": "30",
+        "time_left": "-768"
+      },
+      {
+        "date": "2023-10-24 17:45:59",
+        "category": "A2P",
+        "project": "A2P (IOSMS)",
+        "details": "Actions of SSOC:\r\n1. Checked the alert email with summary report related to non-delivery message or undelivered from corresponding SP account.\r\n2. Report to corresponding carrier(s) to investigate the undelivered reason.",
+        "sla": "30",
+        "time_left": "-3224"
+      },
+      {
+        "date": "2023-10-24 17:44:40",
+        "category": "A2P",
+        "project": "A2P (IOSMS)",
+        "details": "Actions of SSOC:\r\n1. Checked the alert email with summary report related to non-delivery message or undelivered from corresponding SP account.\r\n2. Report to corresponding carrier(s) to investigate the undelivered reason.",
+        "sla": "30",
+        "time_left": "-3225"
+      },
+      {
+        "date": "2023-10-23 16:44:10",
+        "category": "A2P",
+        "project": "A2P (IOSMS)",
+        "details": "Actions of SSOC:\r\n1. Checked the alert email with summary report related to non-delivery message or undelivered from corresponding SP account.\r\n2. Report to corresponding carrier(s) to investigate the undelivered reason.",
+        "sla": "30",
+        "time_left": "-4725"
+      },
+      {
+        "date": "2023-10-23 14:44:07",
+        "category": "A2P",
+        "project": "A2P (IOSMS)",
+        "details": "Actions of SSOC:\r\n1. Checked the alert email with summary report related to non-delivery message or undelivered from corresponding SP account.\r\n2. Report to corresponding carrier(s) to investigate the undelivered reason.",
+        "sla": "30",
+        "time_left": "-4845"
+      },
+      {
+        "date": "2023-10-23 14:42:55",
+        "category": "A2P",
+        "project": "A2P (IOSMS)",
+        "details": "Actions of SSOC:\r\n1. Checked the alert email with summary report related to non-delivery message or undelivered from corresponding SP account.\r\n2. Report to corresponding carrier(s) to investigate the undelivered reason.",
+        "sla": "30",
+        "time_left": "-4847"
+      },
+      {
+        "date": "2023-10-23 13:43:14",
+        "category": "A2P",
+        "project": "A2P (IOSMS)",
+        "details": "Actions of SSOC:\r\n1. Checked the alert email with summary report related to non-delivery message or undelivered from corresponding SP account.\r\n2. Report to corresponding carrier(s) to investigate the undelivered reason.",
+        "sla": "30",
+        "time_left": "-4906"
+      },
+      {
+        "date": "2023-10-22 19:45:16",
+        "category": "A2P",
+        "project": "A2P (IOSMS)",
+        "details": "Actions of SSOC:\r\n1. Checked the alert email with summary report related to non-delivery message or undelivered from corresponding SP account.\r\n2. Report to corresponding carrier(s) to investigate the undelivered reason.",
+        "sla": "30",
+        "time_left": "-5984"
+      },
+      {
+        "date": "2023-10-22 18:46:42",
+        "category": "A2P",
+        "project": "A2P (IOSMS)",
+        "details": "Actions of SSOC:\r\n1. Checked the alert email with summary report related to non-delivery message or undelivered from corresponding SP account.\r\n2. Report to corresponding carrier(s) to investigate the undelivered reason.",
+        "sla": "30",
+        "time_left": "-6043"
+      },
+      {
+        "date": "2023-10-22 18:45:18",
+        "category": "A2P",
+        "project": "A2P (IOSMS)",
+        "details": "Actions of SSOC:\r\n1. Checked the alert email with summary report related to non-delivery message or undelivered from corresponding SP account.\r\n2. Report to corresponding carrier(s) to investigate the undelivered reason.",
+        "sla": "30",
+        "time_left": "-6044"
+      },
+      {
+        "date": "2023-10-22 14:45:08",
+        "category": "A2P",
+        "project": "A2P (IOSMS)",
+        "details": "Actions of SSOC:\r\n1. Checked the alert email with summary report related to non-delivery message or undelivered from corresponding SP account.\r\n2. Report to corresponding carrier(s) to investigate the undelivered reason.",
+        "sla": "30",
+        "time_left": "-6284"
+      },
+      {
+        "date": "2023-10-22 12:42:01",
+        "category": "A2P",
+        "project": "A2P (IOSMS)",
+        "details": "Actions of SSOC:\r\n1. Checked the alert email with summary report related to non-delivery message or undelivered from corresponding SP account.\r\n2. Report to corresponding carrier(s) to investigate the undelivered reason.",
+        "sla": "30",
+        "time_left": "-6407"
+      },
+      {
+        "date": "2023-10-21 18:46:38",
+        "category": "A2P",
+        "project": "A2P (IOSMS)",
+        "details": "Actions of SSOC:\r\n1. Checked the alert email with summary report related to non-delivery message or undelivered from corresponding SP account.\r\n2. Report to corresponding carrier(s) to investigate the undelivered reason.",
+        "sla": "30",
+        "time_left": "-7483"
+      },
+      {
+        "date": "2023-10-21 09:40:56",
+        "category": "A2P",
+        "project": "A2P (IOSMS)",
+        "details": "Actions of SSOC:\r\n1. Checked the alert email with summary report related to non-delivery message or undelivered from corresponding SP account.\r\n2. Report to corresponding carrier(s) to investigate the undelivered reason.",
+        "sla": "30",
+        "time_left": "-8029"
+      },
+      {
+        "date": "2023-10-20 22:45:26",
+        "category": "A2P",
+        "project": "A2P (IOSMS)",
+        "details": "Actions of SSOC:\r\n1. Checked the alert email with summary report related to non-delivery message or undelivered from corresponding SP account.\r\n2. Report to corresponding carrier(s) to investigate the undelivered reason.",
+        "sla": "30",
+        "time_left": "-8684"
+      },
+      {
+        "date": "2023-10-20 13:45:38",
+        "category": "A2P",
+        "project": "A2P (IOSMS)",
+        "details": "Actions of SSOC:\r\n1. Checked the alert email with summary report related to non-delivery message or undelivered from corresponding SP account.\r\n2. Report to corresponding carrier(s) to investigate the undelivered reason.",
+        "sla": "30",
+        "time_left": "-9224"
+      },
+      {
+        "date": "2023-10-20 13:44:05",
+        "category": "A2P",
+        "project": "A2P (IOSMS)",
+        "details": "Actions of SSOC:\r\n1. Checked the alert email with summary report related to non-delivery message or undelivered from corresponding SP account.\r\n2. Report to corresponding carrier(s) to investigate the undelivered reason.",
+        "sla": "30",
+        "time_left": "-9225"
+      },
+      {
+        "date": "2023-10-19 23:46:37",
+        "category": "A2P",
+        "project": "A2P (IOSMS)",
+        "details": "Actions of SSOC:\r\n1. Checked the alert email with summary report related to non-delivery message or undelivered from corresponding SP account.\r\n2. Report to corresponding carrier(s) to investigate the undelivered reason.",
+        "sla": "30",
+        "time_left": "-10063"
+      },
+      {
+        "date": "2023-10-19 13:44:15",
+        "category": "A2P",
+        "project": "A2P (IOSMS)",
+        "details": "Actions of SSOC:\r\n1. Checked the alert email with summary report related to non-delivery message or undelivered from corresponding SP account.\r\n2. Report to corresponding carrier(s) to investigate the undelivered reason.",
+        "sla": "30",
+        "time_left": "-10665"
+      },
+      {
+        "date": "2023-10-18 09:40:59",
+        "category": "A2P",
+        "project": "A2P (IOSMS)",
+        "details": "Actions of SSOC:\r\n1. Checked the alert email with summary report related to non-delivery message or undelivered from corresponding SP account.\r\n2. Report to corresponding carrier(s) to investigate the undelivered reason.",
+        "sla": "30",
+        "time_left": "-12349"
+      },
+      {
+        "date": "2023-10-16 11:44:33",
+        "category": "A2P",
+        "project": "A2P (IOSMS)",
+        "details": "Actions of SSOC:\r\n1. Checked the alert email with summary report related to non-delivery message or undelivered from corresponding SP account.\r\n2. Report to corresponding carrier(s) to investigate the undelivered reason.",
+        "sla": "30",
+        "time_left": "-15105"
+      },
+      {
+        "date": "2023-10-16 11:43:26",
+        "category": "A2P",
+        "project": "A2P (IOSMS)",
+        "details": "Actions of SSOC:\r\n1. Checked the alert email with summary report related to non-delivery message or undelivered from corresponding SP account.\r\n2. Report to corresponding carrier(s) to investigate the undelivered reason.",
+        "sla": "30",
+        "time_left": "-15106"
+      },
+      {
+        "date": "2023-10-16 08:40:53",
+        "category": "A2P",
+        "project": "A2P (IOSMS)",
+        "details": "Actions of SSOC:\r\n1. Checked the alert email with summary report related to non-delivery message or undelivered from corresponding SP account.\r\n2. Report to corresponding carrier(s) to investigate the undelivered reason.",
+        "sla": "30",
+        "time_left": "-15289"
+      },
+      {
+        "date": null,
+        "category": "A2P",
+        "project": "A2P (IOSMS)",
+        "details": "Actions of SSOC:\r\n1. Checked the alert email with summary report related to non-delivery message or undelivered from corresponding SP account.\r\n2. Report to corresponding carrier(s) to investigate the undelivered reason.",
+        "sla": "30",
+        "time_left": null
+      }
+    ]
+  }
