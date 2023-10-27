@@ -1,8 +1,8 @@
 .date{
     z-index: 1;
-    position: fixed;
+    position: absolute;
     color: white;
-    left: 25px;
+    right: 25px;
 }
 
 
