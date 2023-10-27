@@ -22,7 +22,7 @@ export default function DashBoard() {
     time_left: '1',
   }]);
   // Time's background color
-  const [selectedOption, setSelectedOption] = useState('1'); 
+  const [selectedOption, setSelectedOption] = useState('1');
   //Modal
   const [isModalOpen, setIsModalOpen] = useState(false);
   const showModal = () => {
@@ -48,29 +48,26 @@ export default function DashBoard() {
   //         console.log('fetch data failed', error);
   //       });
   //   };
-  const ChangeTotal = (e) => {
-    const value = e.target.value;
+  const ChangeTotal = (value) => {
+    //const value = e.target.value;
     //const newData = getMockData(value); // 根据时间范围获取模拟数据
     //setData(newData); // 更新数据
     // fetch("http://10.250.70.184/main/eric/ssoc_dashboard/soc_count.php?day=" + value, {
-/*     fetch("http://172.19.1.17/main/eric/ssoc_dashboard/soc_count.php?day=" + value, {
- */    fetch(`https://raw.githubusercontent.com/eddy1129/test/master/src/count${value}.json`, {
+    /*     fetch("http://172.19.1.17/main/eric/ssoc_dashboard/soc_count.php?day=" + value, { */
+    fetch(`https://raw.githubusercontent.com/eddy1129/test/master/src/count${value}.json`, {
       method: "GET",
-     /*  headers: { "Content-Type": "application/json" }, */
+      /*  headers: { "Content-Type": "application/json" }, */
     })
       .then((response) => response.json())
       .then((data) => {
         setSelectedOption(value);
         setDashBoardCount(data.data);
       });
-
-
   };
   const ChangeChart = (e) => {
     const value = e.target.value;
-    // fetch("http://10.250.70.184/main/eric/ssoc_dashboard/soc_trend.php?day=" + value, {
-/*     fetch("http://172.19.1.17/main/eric/ssoc_dashboard/soc_trend.php?day=" + value, {
- */    fetch(`https://raw.githubusercontent.com/eddy1129/test/master/src/trend${value}.json`, {
+    /*     fetch("http://172.19.1.17/main/eric/ssoc_dashboard/soc_trend.php?day=" + value, {*/
+    fetch(`https://raw.githubusercontent.com/eddy1129/test/master/src/trend${value}.json`, {
       method: "GET",
       /* headers: { "Content-Type": "application/json" }, */
     })
@@ -83,9 +80,8 @@ export default function DashBoard() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    // fetch("http://10.250.70.184/main/eric/ssoc_dashboard/soc_count.php?day=1", {
-/*     fetch("http://172.19.1.17/main/eric/ssoc_dashboard/soc_count.php?day=1", {
- */    fetch("https://raw.githubusercontent.com/eddy1129/test/master/src/day1.json", {
+    /*     fetch("http://172.19.1.17/main/eric/ssoc_dashboard/soc_count.php?day=1", { */
+    fetch("https://raw.githubusercontent.com/eddy1129/test/master/src/day1.json", {
       method: "GET",
       /* headers: { "Content-Type": "application/json" }, */
     })
@@ -95,8 +91,8 @@ export default function DashBoard() {
         console.log(data.data);
         console.log(dashBoardCount[0].total)
       });
-/*     fetch("http://172.19.1.17/main/eric/ssoc_dashboard/soc_trend.php?day=7", {
- */    fetch("https://raw.githubusercontent.com/eddy1129/test/master/src/day7.json", {
+    /*     fetch("http://172.19.1.17/main/eric/ssoc_dashboard/soc_trend.php?day=7", { */
+    fetch("https://raw.githubusercontent.com/eddy1129/test/master/src/day7.json", {
       method: "GET",
       /* headers: { "Content-Type": "application/json" }, */
     })
@@ -107,22 +103,36 @@ export default function DashBoard() {
 
 /*     fetch("http://172.19.1.17/main/eric/ssoc_dashboard/soc_table.php", {
  */    fetch("https://raw.githubusercontent.com/eddy1129/test/master/src/data.json", {
-      method: "GET",
-      /* headers: { "Content-Type": "application/json" }, */
-    })
+        method: "GET",
+        /* headers: { "Content-Type": "application/json" }, */
+      })
       .then((response) => response.json())
       .then((data) => {
         setTableData(data.table);
       });
+
+
+    const options = ['1', '7', '30', '90'];
+    let currentIndex = 0;
 
     const interval = setInterval(() => {
       const formattedTime = moment().format('YYYY-MM-DD');
       setCurrentTime(formattedTime);
     }, 1000);
 
+    const optionInterval = setInterval(() => {
+      currentIndex = (currentIndex + 1) % options.length;
+      const selectedValue = options[currentIndex];
+      setSelectedOption(selectedValue);
+      ChangeTotal(selectedValue);
+    }, 3000);
+
+
+
     return () => {
       clearInterval(interval);
-     
+      clearInterval(optionInterval);
+
     };
   }, []);
 
