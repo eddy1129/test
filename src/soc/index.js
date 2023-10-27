@@ -53,7 +53,8 @@ export default function DashBoard() {
     //const newData = getMockData(value); // 根据时间范围获取模拟数据
     //setData(newData); // 更新数据
     // fetch("http://10.250.70.184/main/eric/ssoc_dashboard/soc_count.php?day=" + value, {
-    fetch("http://172.19.1.17/main/eric/ssoc_dashboard/soc_count.php?day=" + value, {
+/*     fetch("http://172.19.1.17/main/eric/ssoc_dashboard/soc_count.php?day=" + value, {
+ */    fetch(`https://raw.githubusercontent.com/eddy1129/test/master/src/count${value}.json`, {
       method: "GET",
      /*  headers: { "Content-Type": "application/json" }, */
     })
@@ -68,7 +69,8 @@ export default function DashBoard() {
   const ChangeChart = (e) => {
     const value = e.target.value;
     // fetch("http://10.250.70.184/main/eric/ssoc_dashboard/soc_trend.php?day=" + value, {
-    fetch("http://172.19.1.17/main/eric/ssoc_dashboard/soc_trend.php?day=" + value, {
+/*     fetch("http://172.19.1.17/main/eric/ssoc_dashboard/soc_trend.php?day=" + value, {
+ */    fetch(`https://raw.githubusercontent.com/eddy1129/test/master/src/trend${value}.json`, {
       method: "GET",
       /* headers: { "Content-Type": "application/json" }, */
     })
