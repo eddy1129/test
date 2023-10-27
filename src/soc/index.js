@@ -23,6 +23,7 @@ export default function DashBoard() {
   }]);
   // Time's background color
   const [selectedOption, setSelectedOption] = useState('1');
+  const [selectedPast, setSelectedPast] = useState('7');
   //Modal
   const [isModalOpen, setIsModalOpen] = useState(false);
   const showModal = () => {
@@ -48,8 +49,8 @@ export default function DashBoard() {
   //         console.log('fetch data failed', error);
   //       });
   //   };
-  const ChangeTotal = (value) => {
-    //const value = e.target.value;
+  const ChangeTotal = (e) => {
+    const value = e.target.value;
     //const newData = getMockData(value); // 根据时间范围获取模拟数据
     //setData(newData); // 更新数据
     // fetch("http://10.250.70.184/main/eric/ssoc_dashboard/soc_count.php?day=" + value, {
@@ -65,6 +66,7 @@ export default function DashBoard() {
       });
   };
   const ChangeChart = (e) => {
+
     const value = e.target.value;
     /*     fetch("http://172.19.1.17/main/eric/ssoc_dashboard/soc_trend.php?day=" + value, {*/
     fetch(`https://raw.githubusercontent.com/eddy1129/test/master/src/trend${value}.json`, {
@@ -74,6 +76,7 @@ export default function DashBoard() {
       .then((response) => response.json())
       .then((data) => {
         setData(data.trend);
+        setSelectedPast(value);
       });
   };
 
@@ -111,21 +114,23 @@ export default function DashBoard() {
         setTableData(data.table);
       });
 
-
-    const options = ['1', '7', '30', '90'];
-    let currentIndex = 0;
-
     const interval = setInterval(() => {
       const formattedTime = moment().format('YYYY-MM-DD');
       setCurrentTime(formattedTime);
     }, 1000);
 
+
+    // Changed value Each 30 second
+    const options = [{ target: { value: '1' } }, { target: { value: '7' } }, { target: { value: '30' } }, { target: { value: '90' } }];
+    let newCurrentIndex = 0;
+
     const optionInterval = setInterval(() => {
-      currentIndex = (currentIndex + 1) % options.length;
-      const selectedValue = options[currentIndex];
+      newCurrentIndex = (newCurrentIndex + 1) % options.length;
+      const selectedValue = options[newCurrentIndex].target.value;
       setSelectedOption(selectedValue);
-      ChangeTotal(selectedValue);
-    }, 3000);
+      ChangeTotal(options[newCurrentIndex]);
+      ChangeChart(options[newCurrentIndex]);
+    }, 2000);
 
 
 
@@ -376,10 +381,13 @@ export default function DashBoard() {
           Alarms Trend
         </h2>
         <Radio.Group onChange={ChangeChart} defaultValue="a">
-          <Radio.Button value="7">past 7 days</Radio.Button>
-          <Radio.Button value="30">past 30 days</Radio.Button>
-          <Radio.Button value="90">past 90 days</Radio.Button>
+          <Radio.Button value="7" style={{ background: selectedPast === '7' ? 'rgb(251, 170, 124)' : 'transparent', color: 'black', border: '1px solid white' }}>7 days</Radio.Button>
+          <Radio.Button value="30" style={{ background: selectedPast === '30' ? 'rgb(251, 170, 124)' : 'transparent', color: 'black', border: '1px solid white' }}>30 days</Radio.Button>
+          <Radio.Button value="90" style={{ background: selectedPast === '90' ? 'rgb(251, 170, 124)' : 'transparent', color: 'black', border: '1px solid white' }}>90 days</Radio.Button>
         </Radio.Group>
+
+
+
         <div style={{ marginBottom: '16px' }}></div>
         <Line {...config} />
       </Card>
