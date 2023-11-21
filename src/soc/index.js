@@ -230,12 +230,19 @@ export default function DashBoard() {
   ];
 
   return (
+<<<<<<< HEAD
+    <div>
+      <Text className='date' strong>
+        Date: {currentTime}
+      </Text>
+=======
     <div >
       <Row >
       <Text strong style={{ fontSize: '24px' }} className='date'>
         Date: {currentTime}
       </Text>
       </Row>
+>>>>>>> e0d3c1cfc23f90d6ea07a3f7ad1fb1db8f7559d5
       <Row gutter={16}>
         <Col span={6} >
           <Card
@@ -252,7 +259,11 @@ export default function DashBoard() {
                 flexDirection: 'row',
                 justifyContent: 'space-between',
                 alignItems: 'center',
+<<<<<<< HEAD
+                width: '100%',                
+=======
                 width: '100%',            
+>>>>>>> e0d3c1cfc23f90d6ea07a3f7ad1fb1db8f7559d5
               }}
             >
               <h2
@@ -386,7 +397,11 @@ export default function DashBoard() {
           <Radio.Button value="30" style={{ background: selectedPast === '30' ? 'rgb(251, 170, 124)' : 'transparent', color: 'black', border: '1px solid white' }}>30 days</Radio.Button>
           <Radio.Button value="90" style={{ background: selectedPast === '90' ? 'rgb(251, 170, 124)' : 'transparent', color: 'black', border: '1px solid white' }}>90 days</Radio.Button>
         </Radio.Group>
+<<<<<<< HEAD
+        <Line {...config} style={{height:'200px' }}/>
+=======
         <Line {...config} style={{ marginBottom: '16px',height:'200px' }}/>
+>>>>>>> e0d3c1cfc23f90d6ea07a3f7ad1fb1db8f7559d5
       </Card>
       <Card>
         <h2 style={{

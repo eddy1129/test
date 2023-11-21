@@ -12,6 +12,15 @@ code {
     monospace;
 }
 
+<<<<<<< HEAD
+.date{
+  position: absolute;
+  z-index:99;
+  color: white;
+  right: 25px;
+  font-size: 24px;
+}
+=======
 
 :where(.css-dev-only-do-not-override-3mqfnx).ant-card .ant-card-body {
   padding: 0px;
@@ -24,3 +33,4 @@ code {
   color: white;
   right: 25px;
 }
+>>>>>>> e0d3c1cfc23f90d6ea07a3f7ad1fb1db8f7559d5
