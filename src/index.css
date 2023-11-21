@@ -12,3 +12,10 @@ code {
     monospace;
 }
 
+.date{
+  position: absolute;
+  z-index:99;
+  color: white;
+  right: 25px;
+  font-size: 24px;
+}
