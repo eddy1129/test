@@ -154,7 +154,7 @@ export default () => {
 
       {result?.items?.map(item => item.alarm)}
 
-
+      {/*wer*/}
     </>
   );
 
