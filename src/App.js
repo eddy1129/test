@@ -1,8 +1,8 @@
-import HereMap from "./HereMap";
+import Event_input from "./event_input";
 
 function App() {
   return (
-    <HereMap/>
+    <Event_input/>
   );
 }
 

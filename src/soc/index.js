@@ -5,7 +5,6 @@ import { Typography } from 'antd';
 import { Line } from '@ant-design/plots';
 import moment from 'moment';
 import { AlertTwoTone } from '@ant-design/icons';
-import classes from './soc.module.css'
 
 
 const { Text } = Typography;
@@ -231,13 +230,13 @@ export default function DashBoard() {
   ];
 
   return (
-    <div id={classes.soc}>
-      <Row>
-      <Text strong style={{ fontSize: '24px' }} className={classes.date}>
+    <div >
+      <Row >
+      <Text strong style={{ fontSize: '24px' }} className='date'>
         Date: {currentTime}
       </Text>
       </Row>
-      <Row gutter={16} style={{ marginBottom: '10px' }}>
+      <Row gutter={16}>
         <Col span={6} >
           <Card
             
@@ -253,9 +252,7 @@ export default function DashBoard() {
                 flexDirection: 'row',
                 justifyContent: 'space-between',
                 alignItems: 'center',
-                width: '100%',
-                marginBottom: '10px',
-                
+                width: '100%',            
               }}
             >
               <h2
@@ -263,7 +260,6 @@ export default function DashBoard() {
                   fontSize: '20px',
                   fontWeight: 'bold',
                   color: 'white',
-                  marginBottom: '0',
                 }}
               >
                 Total
@@ -375,11 +371,13 @@ export default function DashBoard() {
           </Card>
         </Col>
       </Row>
-      <Card style={{ marginBottom: '16px'}} >
+      <Card >
         <h2 style={{
           fontSize: '20px',
           fontWeight: 'bold',
           color: 'black',
+          margin:'0px',
+          padding:'0px'
         }}>
           Alarms Trend
         </h2>
@@ -388,7 +386,6 @@ export default function DashBoard() {
           <Radio.Button value="30" style={{ background: selectedPast === '30' ? 'rgb(251, 170, 124)' : 'transparent', color: 'black', border: '1px solid white' }}>30 days</Radio.Button>
           <Radio.Button value="90" style={{ background: selectedPast === '90' ? 'rgb(251, 170, 124)' : 'transparent', color: 'black', border: '1px solid white' }}>90 days</Radio.Button>
         </Radio.Group>
-        <div style={{ marginBottom: '16px'}}></div>
         <Line {...config} style={{ marginBottom: '16px',height:'200px' }}/>
       </Card>
       <Card>
@@ -396,7 +393,7 @@ export default function DashBoard() {
           fontSize: '20px',
           fontWeight: 'bold',
           color: 'black',
-          
+          margin:'0px',
         }}>
           Alarms Highlights
         </h2>
@@ -405,9 +402,10 @@ export default function DashBoard() {
           columns={columns}
           pagination
           scroll={{ x: 300 }}
+          style={{margin:'0px',padding:'0px'}}
         />
       </Card>
-    </div>
+    </div >
   );
 
 };
