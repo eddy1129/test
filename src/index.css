@@ -12,6 +12,7 @@ code {
     monospace;
 }
 
+<<<<<<< HEAD
 .date{
   position: absolute;
   z-index:99;
@@ -19,3 +20,17 @@ code {
   right: 25px;
   font-size: 24px;
 }
+=======
+
+:where(.css-dev-only-do-not-override-3mqfnx).ant-card .ant-card-body {
+  padding: 0px;
+  /* border-radius: 0 0 8px 8px; */
+}
+
+.date{
+  z-index: 1;
+  position: absolute;
+  color: white;
+  right: 25px;
+}
+>>>>>>> e0d3c1cfc23f90d6ea07a3f7ad1fb1db8f7559d5

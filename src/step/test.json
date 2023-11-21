@@ -1,0 +1,12 @@
+{
+    "items": [
+        {
+            "alarm": "alarm off",
+            "impact": "Impact off"
+        },
+        {
+            "alarm": "alarm on",
+            "impact": "Impact on"
+        }
+    ]
+}
