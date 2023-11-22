@@ -1,8 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import dayjs from 'dayjs';
-import { Button, message, Steps, theme, Radio, DatePicker, Space, Form, Input, Card, TimePicker } from 'antd';
-import { CloseOutlined, IconProvider } from '@ant-design/icons';
-
+import { Button, message, Steps, theme, Radio, DatePicker, Space, Form, Card, TimePicker } from 'antd';
+import { CloseOutlined } from '@ant-design/icons';
+import AlarmDisplay from './AlarmDisplay';
 
 export default () => {
   const { token } = theme.useToken();
@@ -20,10 +20,7 @@ export default () => {
   const selectTime = (time) => {
     setValue(time);
   };
-  const [step2Record, setStep2Record] = useState('step1');
-  const [result, setResult] = useState({ items: [] });
-
-
+  const [step2Record2, setStep2Record2] = useState({});
   const [form] = Form.useForm();
 
 
@@ -47,7 +44,8 @@ export default () => {
     <>
       <Form
         onValuesChange={(_, allValues) => {
-          setStep2Record(allValues);
+          console.log(allValues)
+          setStep2Record2(allValues);
         }}
         labelCol={{
           span: 6,
@@ -90,7 +88,7 @@ export default () => {
                     margin: '0 auto',
                     value: "9"
                   }}>
-                    <TimePicker minuteStep={15} secondStep={60} hourStep={1} value={value} onChange={selectTime} />
+                    <TimePicker secondStep={60} hourStep={1} value={value} onChange={selectTime} />
                   </Form.Item>
 
 
@@ -152,8 +150,9 @@ export default () => {
   const last = (
     <>
 
-      {result?.items?.map(item => item.alarm)}
-
+      {JSON.stringify(step2Record2)}
+      {<AlarmDisplay step2Record2={step2Record2} />
+      }
 
     </>
   );
@@ -185,7 +184,7 @@ export default () => {
     setCurrent(current - 1);
   };
 
-  const items = steps.map((item) => ({ key: item.title, title: item.title }));
+  const stepMap = steps.map((item) => ({ key: item.title, title: item.title }));
 
   const contentStyle = {
     lineHeight: '180px',
@@ -199,13 +198,12 @@ export default () => {
 
   return (
     <>
-      <Steps current={current} items={items} />
+      <Steps current={current} items={stepMap} />
       <div style={contentStyle}>{steps[current].content}</div>
       <div style={{ marginTop: 24 }}>
         {current < steps.length - 1 && (
           <Button type="primary" onClick={() => {
             next()
-            step2Record === 'step1' ? console.log(team, date) : setResult(JSON.stringify(form.getFieldsValue()))
           }}>
             Next
           </Button>
