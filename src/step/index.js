@@ -150,10 +150,16 @@ export default () => {
   const last = (
     <>
 
+<<<<<<< HEAD
       {JSON.stringify(step2Record2)}
       {<AlarmDisplay step2Record2={step2Record2} />
       }
 
+=======
+      {result?.items?.map(item => item.alarm)}
+
+      {/*wer*/}
+>>>>>>> 4d86c2a4808090e16e86f3744f6f6dfdaf6a523c
     </>
   );
 
